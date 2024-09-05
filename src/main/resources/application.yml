@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: es-crash
+
+app:
+  es:
+    host: http://localhost:9200

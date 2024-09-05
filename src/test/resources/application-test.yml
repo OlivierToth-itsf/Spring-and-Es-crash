@@ -1,0 +1,4 @@
+logging:
+  level:
+    test:
+      es_crash: info
