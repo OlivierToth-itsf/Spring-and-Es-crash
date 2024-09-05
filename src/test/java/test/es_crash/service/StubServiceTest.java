@@ -70,7 +70,8 @@ class StubServiceTest {
         ExecutorService executorService = Executors.newCachedThreadPool();
         var tasks = new ArrayList<Callable<Object>>();
         // These request may crash
-        for(int i = 0; i < 25; i++) {
+        LOGGER.info("will call big stub");
+        for(int i = 0; i < 30; i++) {
             tasks.add((Callable) () -> stubService.get(bigDoc.getId()));
         }
         executorService.invokeAll(tasks);
